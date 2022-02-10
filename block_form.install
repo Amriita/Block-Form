@@ -1,0 +1,29 @@
+<?php
+/**
+  * Implement hook
+  *
+  */
+function block_form_schema() {
+    $schema['nameandRating'] = [
+        'fields'=>[
+            'id'=>[
+                'description'=>'id',
+                'type'=>'serial',
+                'not null'=>TRUE
+            ],
+            'name'=>[
+                'type'=>'varchar',
+                'length'=>50,
+                'not null' =>TRUE
+            ],
+            'rating'=>[
+                'type'=>'varchar',
+                'length'=>10,
+                'not null'=>TRUE,
+            ],
+        ],
+        'primary key' =>['id'],
+
+        ];
+        return $schema;
+    }
